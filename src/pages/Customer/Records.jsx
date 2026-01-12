@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, DatePicker, Space, Table } from 'antd'
+import { Button, DatePicker, Space, Table, message } from 'antd'
 import http from '../../services/http'
 import dayjs from 'dayjs'
 
@@ -24,10 +24,13 @@ export default function MyRecords() {
         end: range?.[1] ? toISO(range[1]) : undefined
       }
       const resp = await http.get('/api/me/records', { params })
-      setData(resp.list || [])
+      setData(resp.list || resp.records || [])
       setTotal(resp.total || 0)
       setPage(resp.page || p)
       setSize(resp.size || s)
+    } catch (error) {
+      console.error('获取消费记录失败:', error)
+      message.error('获取消费记录失败')
     } finally {
       setLoading(false)
     }

@@ -29,10 +29,13 @@ export default function Records({ role }) {
         end: filters.range?.[1] ? toISO(filters.range[1]) : undefined
       }
       const resp = await http.get('/api/records', { params })
-      setData(resp.list || [])
+      setData(resp.list || resp.records || [])
       setTotal(resp.total || 0)
       setPage(resp.page || p)
       setSize(resp.size || s)
+    } catch (error) {
+      console.error('获取消费记录列表失败:', error)
+      message.error('获取消费记录列表失败')
     } finally {
       setLoading(false)
     }
@@ -61,29 +64,39 @@ export default function Records({ role }) {
   }
 
   const onDelete = async id => {
-    await http.delete(`/api/records/${id}`)
-    message.success('删除成功')
-    fetchList()
+    try {
+      await http.delete(`/api/records/${id}`)
+      message.success('删除成功')
+      fetchList()
+    } catch (error) {
+      console.error('删除失败:', error)
+      message.error('删除失败')
+    }
   }
 
   const onSubmit = async () => {
-    const values = await form.validateFields()
-    const payload = {
-      customerId: values.customerId,
-      amount: values.amount,
-      category: values.category,
-      remark: values.remark,
-      paidAt: toISO(values.paidAt)
+    try {
+      const values = await form.validateFields()
+      const payload = {
+        customerId: values.customerId,
+        amount: values.amount,
+        category: values.category,
+        remark: values.remark,
+        paidAt: toISO(values.paidAt)
+      }
+      if (edit) {
+        await http.put(`/api/records/${edit.id}`, payload)
+        message.success('更新成功')
+      } else {
+        await http.post('/api/records', payload)
+        message.success('创建成功')
+      }
+      setOpen(false)
+      fetchList()
+    } catch (error) {
+      console.error('提交失败:', error)
+      message.error('提交失败')
     }
-    if (edit) {
-      await http.put(`/api/records/${edit.id}`, payload)
-      message.success('更新成功')
-    } else {
-      await http.post('/api/records', payload)
-      message.success('创建成功')
-    }
-    setOpen(false)
-    fetchList()
   }
 
   const columns = [

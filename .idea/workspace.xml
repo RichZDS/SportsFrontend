@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f44b0ba-2a4d-42c5-a096-f8edeb3de841" name="更改" comment="feat(app): 初始化消费管理系统前端项目&#10;&#10;- 添加 Ant Design、React、ECharts 前端框架和依赖&#10;- 创建主应用组件和路由结构，支持管理员和客户双角色&#10;- 实现客户管理页面，包括增删改查功能和分页&#10;- 实现消费记录管理页面，支持按客户、分类、时间范围筛选&#10;- 实现客户角色下的个人消费记录查询功能&#10;- 实现统计报表页面，包含月度趋势和分类占比图表&#10;- 集成 Axios HTTP 客户端并配置请求拦截器&#10;- 添加 ECharts 图表组件和响应式适配&#10;- 配置 Vite 开发服务器和环境变量" />
+    <list default="true" id="3f44b0ba-2a4d-42c5-a096-f8edeb3de841" name="更改" comment="chore(ide): 添加推送设置配置&#10;&#10;- 配置强制推送目标为 origin 的 zhengyaqi1 分支&#10;- 为 IDE 添加推送设置组件配置">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_f890881c/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Admin/Customers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/Customers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Admin/Records.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/Records.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Admin/Reports.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/Reports.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Customer/Records.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Customer/Records.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,22 +39,22 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/Code/Sports/frontend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.applicationServers",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Code/Project/Sports/frontend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="zhengyaqi1" />
@@ -80,8 +88,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
       </set>
     </attachedChunks>
   </component>
@@ -96,10 +103,43 @@
       <workItem from="1766968554034" duration="469000" />
       <workItem from="1766971082594" duration="1587000" />
       <workItem from="1766975768929" duration="64000" />
+      <workItem from="1767103729775" duration="41000" />
+      <workItem from="1768219139689" duration="77000" />
+      <workItem from="1768219809613" duration="1794000" />
     </task>
+    <task id="LOCAL-00001" summary="chore(build): 添加模块类型配置&#10;&#10;- 在 package.json 中添加 type: module 配置&#10;- 为 Vite 依赖临时目录设置模块类型支持">
+      <option name="closed" value="true" />
+      <created>1766986027325</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1766986027325</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore(build): 添加模块类型配置&#10;&#10;- 在 package.json 中添加 type: module 配置&#10;- 为 Vite 依赖临时目录设置模块类型支持">
+      <option name="closed" value="true" />
+      <created>1766986044690</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1766986044690</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore(ide): 添加推送设置配置&#10;&#10;- 配置强制推送目标为 origin 的 zhengyaqi1 分支&#10;- 为 IDE 添加推送设置组件配置">
+      <option name="closed" value="true" />
+      <created>1766986513363</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1766986513363</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore(build): 添加模块类型配置&#10;&#10;- 在 package.json 中添加 type: module 配置&#10;- 为 Vite 依赖临时目录设置模块类型支持" />
+    <MESSAGE value="chore(ide): 添加推送设置配置&#10;&#10;- 配置强制推送目标为 origin 的 zhengyaqi1 分支&#10;- 为 IDE 添加推送设置组件配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(ide): 添加推送设置配置&#10;&#10;- 配置强制推送目标为 origin 的 zhengyaqi1 分支&#10;- 为 IDE 添加推送设置组件配置" />
   </component>
 </project>

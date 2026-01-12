@@ -6,7 +6,7 @@ import dayjs from 'dayjs'
 
 export default function Reports() {
   const [year, setYear] = useState(dayjs().year())
-  const [range, setRange] = useState([])
+  const [range, setRange] = useState(null)
   const [monthly, setMonthly] = useState([])
   const [category, setCategory] = useState([])
 
@@ -17,8 +17,8 @@ export default function Reports() {
 
   const fetchCategory = async () => {
     const params = {
-      start: range?.[0] ? dayjs(range[0]).toDate().toISOString() : undefined,
-      end: range?.[1] ? dayjs(range[1]).toDate().toISOString() : undefined
+      start: range?.[0] ? range[0].toISOString() : undefined,
+      end: range?.[1] ? range[1].toISOString() : undefined
     }
     const resp = await http.get('/api/stats/category', { params })
     setCategory(resp || [])
@@ -36,7 +36,19 @@ export default function Reports() {
 
   const categoryOption = {
     tooltip: { trigger: 'item' },
-    series: [{ type: 'pie', radius: '60%', data: (category || []).map(i => ({ name: i.category, value: i.value })) }]
+    legend: { orient: 'vertical', left: 'left' },
+    series: [{ 
+      type: 'pie', 
+      radius: '60%', 
+      data: (category || []).map(i => ({ name: i.category, value: i.value })),
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowOffsetX: 0,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
+    }]
   }
 
   return (
@@ -51,7 +63,7 @@ export default function Reports() {
       <Card title="分类占比">
         <Space style={{ marginBottom: 12 }}>
           <span>时间范围</span>
-          <DatePicker.RangePicker value={range} onChange={v => setRange(v)} showTime />
+          <DatePicker.RangePicker value={range} onChange={setRange} showTime />
         </Space>
         <Chart options={categoryOption} />
       </Card>
