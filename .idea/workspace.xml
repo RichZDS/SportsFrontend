@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f44b0ba-2a4d-42c5-a096-f8edeb3de841" name="更改" comment="feat(admin): 扩展健身管理系统功能&#10;&#10;- 新增员工管理、教练管理、课程管理、器材管理和地点管理模块&#10;- 添加完整的CRUD操作界面和数据处理逻辑&#10;- 更新系统标题为&quot;健身管理系统&quot;并调整导航菜单项&#10;- 优化现有客户和消费记录页面的数据获取和错误处理&#10;- 修复数据响应格式兼容性问题，支持resp.list或resp.records&#10;- 为删除和表单提交操作添加异常处理和用户提示&#10;- 实现新的路由配置以支持新增的管理页面">
+    <list default="true" id="3f44b0ba-2a4d-42c5-a096-f8edeb3de841" name="更改" comment="fix(datetime): 修复日期时间格式化问题&#10;&#10;- 将 toISO 函数重命名为 formatDateTime 并修改实现为 YYYY-MM-DD HH:mm:ss 格式&#10;- 在 Admin/Records 页面的列表查询和表单提交中使用新的日期格式化函数&#10;- 在 Customer/Records 页面的列表查询中使用新的日期格式化函数&#10;- 在 Admin/Reports 页面的统计查询中使用新的日期格式化函数&#10;- 为表格中的消费时间列添加渲染函数以显示格式化的日期时间&#10;- 移除 .idea/workspace.xml 中的临时调试信息">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,6 +103,9 @@
       <workItem from="1768221618858" duration="390000" />
       <workItem from="1768272047471" duration="189000" />
       <workItem from="1768360662432" duration="9000" />
+      <workItem from="1768376984360" duration="1427000" />
+      <workItem from="1768382331527" duration="7000" />
+      <workItem from="1768386491572" duration="111000" />
     </task>
     <task id="LOCAL-00001" summary="chore(build): 添加模块类型配置&#10;&#10;- 在 package.json 中添加 type: module 配置&#10;- 为 Vite 依赖临时目录设置模块类型支持">
       <option name="closed" value="true" />
@@ -136,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768221725994</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix(datetime): 修复日期时间格式化问题&#10;&#10;- 将 toISO 函数重命名为 formatDateTime 并修改实现为 YYYY-MM-DD HH:mm:ss 格式&#10;- 在 Admin/Records 页面的列表查询和表单提交中使用新的日期格式化函数&#10;- 在 Customer/Records 页面的列表查询中使用新的日期格式化函数&#10;- 在 Admin/Reports 页面的统计查询中使用新的日期格式化函数&#10;- 为表格中的消费时间列添加渲染函数以显示格式化的日期时间&#10;- 移除 .idea/workspace.xml 中的临时调试信息">
+      <option name="closed" value="true" />
+      <created>1768378112741</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1768378112741</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +157,7 @@
     <MESSAGE value="chore(build): 添加模块类型配置&#10;&#10;- 在 package.json 中添加 type: module 配置&#10;- 为 Vite 依赖临时目录设置模块类型支持" />
     <MESSAGE value="chore(ide): 添加推送设置配置&#10;&#10;- 配置强制推送目标为 origin 的 zhengyaqi1 分支&#10;- 为 IDE 添加推送设置组件配置" />
     <MESSAGE value="feat(admin): 扩展健身管理系统功能&#10;&#10;- 新增员工管理、教练管理、课程管理、器材管理和地点管理模块&#10;- 添加完整的CRUD操作界面和数据处理逻辑&#10;- 更新系统标题为&quot;健身管理系统&quot;并调整导航菜单项&#10;- 优化现有客户和消费记录页面的数据获取和错误处理&#10;- 修复数据响应格式兼容性问题，支持resp.list或resp.records&#10;- 为删除和表单提交操作添加异常处理和用户提示&#10;- 实现新的路由配置以支持新增的管理页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(admin): 扩展健身管理系统功能&#10;&#10;- 新增员工管理、教练管理、课程管理、器材管理和地点管理模块&#10;- 添加完整的CRUD操作界面和数据处理逻辑&#10;- 更新系统标题为&quot;健身管理系统&quot;并调整导航菜单项&#10;- 优化现有客户和消费记录页面的数据获取和错误处理&#10;- 修复数据响应格式兼容性问题，支持resp.list或resp.records&#10;- 为删除和表单提交操作添加异常处理和用户提示&#10;- 实现新的路由配置以支持新增的管理页面" />
+    <MESSAGE value="fix(datetime): 修复日期时间格式化问题&#10;&#10;- 将 toISO 函数重命名为 formatDateTime 并修改实现为 YYYY-MM-DD HH:mm:ss 格式&#10;- 在 Admin/Records 页面的列表查询和表单提交中使用新的日期格式化函数&#10;- 在 Customer/Records 页面的列表查询中使用新的日期格式化函数&#10;- 在 Admin/Reports 页面的统计查询中使用新的日期格式化函数&#10;- 为表格中的消费时间列添加渲染函数以显示格式化的日期时间&#10;- 移除 .idea/workspace.xml 中的临时调试信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(datetime): 修复日期时间格式化问题&#10;&#10;- 将 toISO 函数重命名为 formatDateTime 并修改实现为 YYYY-MM-DD HH:mm:ss 格式&#10;- 在 Admin/Records 页面的列表查询和表单提交中使用新的日期格式化函数&#10;- 在 Customer/Records 页面的列表查询中使用新的日期格式化函数&#10;- 在 Admin/Reports 页面的统计查询中使用新的日期格式化函数&#10;- 为表格中的消费时间列添加渲染函数以显示格式化的日期时间&#10;- 移除 .idea/workspace.xml 中的临时调试信息" />
   </component>
 </project>
