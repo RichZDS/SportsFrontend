@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f44b0ba-2a4d-42c5-a096-f8edeb3de841" name="更改" comment="chore(ide): 添加推送设置配置&#10;&#10;- 配置强制推送目标为 origin 的 zhengyaqi1 分支&#10;- 为 IDE 添加推送设置组件配置">
+    <list default="true" id="3f44b0ba-2a4d-42c5-a096-f8edeb3de841" name="更改" comment="feat(admin): 扩展健身管理系统功能&#10;&#10;- 新增员工管理、教练管理、课程管理、器材管理和地点管理模块&#10;- 添加完整的CRUD操作界面和数据处理逻辑&#10;- 更新系统标题为&quot;健身管理系统&quot;并调整导航菜单项&#10;- 优化现有客户和消费记录页面的数据获取和错误处理&#10;- 修复数据响应格式兼容性问题，支持resp.list或resp.records&#10;- 为删除和表单提交操作添加异常处理和用户提示&#10;- 实现新的路由配置以支持新增的管理页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_f890881c/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Admin/Customers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/Customers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Admin/Records.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/Records.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Admin/Reports.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/Reports.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Customer/Records.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Customer/Records.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +100,9 @@
       <workItem from="1767103729775" duration="41000" />
       <workItem from="1768219139689" duration="77000" />
       <workItem from="1768219809613" duration="1794000" />
+      <workItem from="1768221618858" duration="390000" />
+      <workItem from="1768272047471" duration="189000" />
+      <workItem from="1768360662432" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="chore(build): 添加模块类型配置&#10;&#10;- 在 package.json 中添加 type: module 配置&#10;- 为 Vite 依赖临时目录设置模块类型支持">
       <option name="closed" value="true" />
@@ -131,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766986513363</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat(admin): 扩展健身管理系统功能&#10;&#10;- 新增员工管理、教练管理、课程管理、器材管理和地点管理模块&#10;- 添加完整的CRUD操作界面和数据处理逻辑&#10;- 更新系统标题为&quot;健身管理系统&quot;并调整导航菜单项&#10;- 优化现有客户和消费记录页面的数据获取和错误处理&#10;- 修复数据响应格式兼容性问题，支持resp.list或resp.records&#10;- 为删除和表单提交操作添加异常处理和用户提示&#10;- 实现新的路由配置以支持新增的管理页面">
+      <option name="closed" value="true" />
+      <created>1768221725994</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1768221725994</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore(build): 添加模块类型配置&#10;&#10;- 在 package.json 中添加 type: module 配置&#10;- 为 Vite 依赖临时目录设置模块类型支持" />
     <MESSAGE value="chore(ide): 添加推送设置配置&#10;&#10;- 配置强制推送目标为 origin 的 zhengyaqi1 分支&#10;- 为 IDE 添加推送设置组件配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(ide): 添加推送设置配置&#10;&#10;- 配置强制推送目标为 origin 的 zhengyaqi1 分支&#10;- 为 IDE 添加推送设置组件配置" />
+    <MESSAGE value="feat(admin): 扩展健身管理系统功能&#10;&#10;- 新增员工管理、教练管理、课程管理、器材管理和地点管理模块&#10;- 添加完整的CRUD操作界面和数据处理逻辑&#10;- 更新系统标题为&quot;健身管理系统&quot;并调整导航菜单项&#10;- 优化现有客户和消费记录页面的数据获取和错误处理&#10;- 修复数据响应格式兼容性问题，支持resp.list或resp.records&#10;- 为删除和表单提交操作添加异常处理和用户提示&#10;- 实现新的路由配置以支持新增的管理页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(admin): 扩展健身管理系统功能&#10;&#10;- 新增员工管理、教练管理、课程管理、器材管理和地点管理模块&#10;- 添加完整的CRUD操作界面和数据处理逻辑&#10;- 更新系统标题为&quot;健身管理系统&quot;并调整导航菜单项&#10;- 优化现有客户和消费记录页面的数据获取和错误处理&#10;- 修复数据响应格式兼容性问题，支持resp.list或resp.records&#10;- 为删除和表单提交操作添加异常处理和用户提示&#10;- 实现新的路由配置以支持新增的管理页面" />
   </component>
 </project>

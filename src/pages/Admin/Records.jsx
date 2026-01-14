@@ -16,7 +16,7 @@ export default function Records({ role }) {
   const [edit, setEdit] = useState(null)
   const [form] = Form.useForm()
 
-  const toISO = v => v ? dayjs(v).toDate().toISOString() : undefined
+  const formatDateTime = v => v ? dayjs(v).format('YYYY-MM-DD HH:mm:ss') : undefined
 
   const fetchList = async (p = page, s = size) => {
     setLoading(true)
@@ -25,8 +25,8 @@ export default function Records({ role }) {
         page: p, size: s,
         customerId: filters.customerId || undefined,
         category: filters.category || undefined,
-        start: filters.range?.[0] ? toISO(filters.range[0]) : undefined,
-        end: filters.range?.[1] ? toISO(filters.range[1]) : undefined
+        start: filters.range?.[0] ? formatDateTime(filters.range[0]) : undefined,
+        end: filters.range?.[1] ? formatDateTime(filters.range[1]) : undefined
       }
       const resp = await http.get('/api/records', { params })
       setData(resp.list || resp.records || [])
@@ -82,7 +82,7 @@ export default function Records({ role }) {
         amount: values.amount,
         category: values.category,
         remark: values.remark,
-        paidAt: toISO(values.paidAt)
+        paidAt: formatDateTime(values.paidAt)
       }
       if (edit) {
         await http.put(`/api/records/${edit.id}`, payload)
@@ -106,7 +106,11 @@ export default function Records({ role }) {
     { title: '金额', dataIndex: 'amount' },
     { title: '分类', dataIndex: 'category' },
     { title: '备注', dataIndex: 'remark' },
-    { title: '消费时间', dataIndex: 'paidAt' },
+    { 
+      title: '消费时间', 
+      dataIndex: 'paidAt',
+      render: (text) => text ? dayjs(text).format('YYYY-MM-DD HH:mm:ss') : '-'
+    },
     {
       title: '操作',
       width: 200,

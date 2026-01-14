@@ -13,15 +13,15 @@ export default function MyRecords() {
   const [size, setSize] = useState(10)
   const [range, setRange] = useState([])
 
-  const toISO = v => v ? dayjs(v).toDate().toISOString() : undefined
+  const formatDateTime = v => v ? dayjs(v).format('YYYY-MM-DD HH:mm:ss') : undefined
 
   const fetchList = async (p = page, s = size) => {
     setLoading(true)
     try {
       const params = {
         page: p, size: s,
-        start: range?.[0] ? toISO(range[0]) : undefined,
-        end: range?.[1] ? toISO(range[1]) : undefined
+        start: range?.[0] ? formatDateTime(range[0]) : undefined,
+        end: range?.[1] ? formatDateTime(range[1]) : undefined
       }
       const resp = await http.get('/api/me/records', { params })
       setData(resp.list || resp.records || [])
@@ -43,7 +43,11 @@ export default function MyRecords() {
     { title: '金额', dataIndex: 'amount' },
     { title: '分类', dataIndex: 'category' },
     { title: '备注', dataIndex: 'remark' },
-    { title: '消费时间', dataIndex: 'paidAt' }
+    { 
+      title: '消费时间', 
+      dataIndex: 'paidAt',
+      render: (text) => text ? dayjs(text).format('YYYY-MM-DD HH:mm:ss') : '-'
+    }
   ]
 
   return (

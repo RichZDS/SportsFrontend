@@ -17,8 +17,8 @@ export default function Reports() {
 
   const fetchCategory = async () => {
     const params = {
-      start: range?.[0] ? range[0].toISOString() : undefined,
-      end: range?.[1] ? range[1].toISOString() : undefined
+      start: range?.[0] ? dayjs(range[0]).format('YYYY-MM-DD HH:mm:ss') : undefined,
+      end: range?.[1] ? dayjs(range[1]).format('YYYY-MM-DD HH:mm:ss') : undefined
     }
     const resp = await http.get('/api/stats/category', { params })
     setCategory(resp || [])
